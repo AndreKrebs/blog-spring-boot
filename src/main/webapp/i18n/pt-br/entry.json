@@ -1,0 +1,25 @@
+{
+    "blogJhipsterApp": {
+        "entry": {
+            "home": {
+                "title": "Entries",
+                "createLabel": "Criar novo Entry",
+                "createOrEditLabel": "Criar ou editar Entry"
+            },
+            "created": "Um novo Entry foi criado com o identificador {{ param }}",
+            "updated": "Um Entry foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Entry foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Entry {{ id }}?"
+            },
+            "detail": {
+                "title": "Entry"
+            },
+            "title": "Title",
+            "content": "Content",
+            "date": "Date",
+            "blog": "Blog",
+            "tag": "Tag"
+        }
+    }
+}
