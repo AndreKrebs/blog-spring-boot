@@ -125,13 +125,13 @@ public class Entry implements Serializable {
 
     public Entry addTag(Tag tag) {
         this.tags.add(tag);
-        tag.getEntries().add(this);
+//        tag.getEntries().add(this);
         return this;
     }
 
     public Entry removeTag(Tag tag) {
         this.tags.remove(tag);
-        tag.getEntries().remove(this);
+//        tag.getEntries().remove(this);
         return this;
     }
 
