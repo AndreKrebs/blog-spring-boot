@@ -16,6 +16,7 @@
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="name"><span jhiTranslate="blogJhipsterApp.tag.name">Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="image"><span jhiTranslate="blogJhipsterApp.tag.image">Image</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
             </thead>
@@ -23,6 +24,12 @@
             <tr *ngFor="let tag of tags ;trackBy: trackId">
                 <td><a [routerLink]="['/tag', tag.id, 'view' ]">{{tag.id}}</a></td>
                 <td>{{tag.name}}</td>
+                <td>
+                    <a *ngIf="tag.image" (click)="openFile(tag.imageContentType, tag.image)">
+                        <img [src]="'data:' + tag.imageContentType + ';base64,' + tag.image" style="max-height: 30px;" alt="tag image"/>
+                    </a>
+                    <span *ngIf="tag.image">{{tag.imageContentType}}, {{byteSize(tag.image)}}</span>
+                </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

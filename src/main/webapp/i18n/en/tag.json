@@ -15,7 +15,8 @@
             "detail": {
                 "title": "Tag"
             },
-            "name": "Name"
+            "name": "Name",
+            "image": "Image"
         }
     }
 }

@@ -9,6 +9,15 @@
                 <dd>
                     <span>{{tag.name}}</span>
                 </dd>
+                <dt><span jhiTranslate="blogJhipsterApp.tag.image">Image</span></dt>
+                <dd>
+                    <div *ngIf="tag.image">
+                        <a (click)="openFile(tag.imageContentType, tag.image)">
+                            <img [src]="'data:' + tag.imageContentType + ';base64,' + tag.image" style="max-width: 100%;" alt="tag image"/>
+                        </a>
+                        {{tag.imageContentType}}, {{byteSize(tag.image)}}
+                    </div>
+                </dd>
             </dl>
 
             <button type="submit"

@@ -1,5 +1,7 @@
 {
-    "name": "Tag",
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
     "fields": [
         {
             "fieldName": "name",
@@ -9,16 +11,19 @@
                 "minlength"
             ],
             "fieldValidateRulesMinlength": 2
+        },
+        {
+            "fieldName": "image",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
         }
     ],
-    "relationships": [],
     "changelogDate": "20190427130117",
-    "entityTableName": "tag",
     "dto": "mapstruct",
-    "pagination": "pagination",
+    "searchEngine": false,
     "service": "serviceClass",
+    "entityTableName": "tag",
+    "databaseType": "sql",
     "jpaMetamodelFiltering": true,
-    "fluentMethods": true,
-    "clientRootFolder": "",
-    "applications": "*"
+    "pagination": "pagination"
 }

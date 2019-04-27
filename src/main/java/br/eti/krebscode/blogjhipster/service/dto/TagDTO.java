@@ -2,6 +2,7 @@ package br.eti.krebscode.blogjhipster.service.dto;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
+import javax.persistence.Lob;
 
 /**
  * A DTO for the Tag entity.
@@ -14,6 +15,10 @@ public class TagDTO implements Serializable {
     @Size(min = 2)
     private String name;
 
+    @Lob
+    private byte[] image;
+
+    private String imageContentType;
 
     public Long getId() {
         return id;
@@ -29,6 +34,22 @@ public class TagDTO implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+
+    public String getImageContentType() {
+        return imageContentType;
+    }
+
+    public void setImageContentType(String imageContentType) {
+        this.imageContentType = imageContentType;
     }
 
     @Override
@@ -57,6 +78,7 @@ public class TagDTO implements Serializable {
         return "TagDTO{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
+            ", image='" + getImage() + "'" +
             "}";
     }
 }

@@ -21,7 +21,7 @@ describe('Service Tests', () => {
             service = injector.get(TagService);
             httpMock = injector.get(HttpTestingController);
 
-            elemDefault = new Tag(0, 'AAAAAAA');
+            elemDefault = new Tag(0, 'AAAAAAA', 'image/png', 'AAAAAAA');
         });
 
         describe('Service methods', async () => {
@@ -55,7 +55,8 @@ describe('Service Tests', () => {
             it('should update a Tag', async () => {
                 const returnedFromService = Object.assign(
                     {
-                        name: 'BBBBBB'
+                        name: 'BBBBBB',
+                        image: 'BBBBBB'
                     },
                     elemDefault
                 );
@@ -72,7 +73,8 @@ describe('Service Tests', () => {
             it('should return a list of Tag', async () => {
                 const returnedFromService = Object.assign(
                     {
-                        name: 'BBBBBB'
+                        name: 'BBBBBB',
+                        image: 'BBBBBB'
                     },
                     elemDefault
                 );

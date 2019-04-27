@@ -24,6 +24,23 @@
                         </small>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="blogJhipsterApp.tag.image" for="field_image">Image</label>
+                    <div>
+                        <img [src]="'data:' + tag.imageContentType + ';base64,' + tag.image" style="max-height: 100px;" *ngIf="tag.image" alt="tag image"/>
+                        <div *ngIf="tag.image" class="form-text text-danger clearfix">
+                            <span class="pull-left">{{tag.imageContentType}}, {{byteSize(tag.image)}}</span>
+                            <button type="button" (click)="clearInputImage('image', 'imageContentType', 'fileImage')" class="btn btn-secondary btn-xs pull-right">
+                                <fa-icon [icon]="'times'"></fa-icon>
+                            </button>
+                        </div>
+                        <input type="file" id="file_image" (change)="setFileData($event, tag, 'image', true)" accept="image/*" jhiTranslate="entity.action.addimage"/>
+                    </div>
+                    <input type="hidden" class="form-control" name="image" id="field_image"
+                        [(ngModel)]="tag.image" />
+                    <input type="hidden" class="form-control" name="imageContentType" id="field_imageContentType"
+                        [(ngModel)]="tag.imageContentType" />
+                </div>
 
             </div>
             <div>
