@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "br.eti.krebscode.blogjhipster",
+      "nativeLanguage": "pt-br"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "blogJhipster",
+    "packageName": "br.eti.krebscode.blogjhipster",
+    "packageFolder": "br/eti/krebscode/blogjhipster",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NDFmOWNkNWRjZGIwYThiNmQxZjgyNDYwZDYwODk5MjYwNDk5NjEyYzY1YzllYjgxMDYzOGY5MGEzODYyYzFiNzE2YzA1NThkZjEyYjIwZTIwZjU4M2RkZDYxYTFmNjJiMTNlMDJiNTMzM2YzOTMyNWRjN2JiZTk2NDAxYTc5OGQ=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": [
+      "pt-br",
+      "en"
+    ]
+  }
+}
